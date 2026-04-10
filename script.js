@@ -21,14 +21,16 @@
   const studentGrid = document.getElementById("student-grid");
   const latestGrid = document.getElementById("latest-grid");
   const heroTags = document.getElementById("hero-tags");
+  const heroFocus = document.getElementById("hero-focus");
   const contactMeta = document.getElementById("contact-meta");
+  const contactUtility = document.getElementById("contact-utility");
 
   setText("brand-title", data.branding.title);
   setText("brand-subtitle", data.branding.subtitle);
   setText("hero-label", data.branding.heroLabel);
   setText("hero-title", data.branding.heroTitle);
   setText("hero-summary", data.branding.heroSummary);
-  setText("positioning-text", data.branding.positioning);
+  setText("hero-note", data.branding.heroNote);
   setText("lead-name", data.lead.name);
   setText("lead-role", data.lead.role);
   setText("lead-bio", data.lead.bio);
@@ -39,75 +41,116 @@
   setText("dynamic-title", data.featuredArticle.title);
   setText("footer-text", data.footer + " " + new Date().getFullYear());
 
-  heroTags.innerHTML = data.branding.heroTags
-    .map((tag) => `<li>${tag}</li>`)
-    .join("");
+  if (heroTags) {
+    heroTags.innerHTML = data.branding.heroTags
+      .map((tag) => `<li>${tag}</li>`)
+      .join("");
+  }
 
-  memberGroups.innerHTML = data.teamGroups
-    .map(
-      (group) => `
-        <article class="member-group" data-reveal="up">
-          <div class="member-heading">
-            <h3>${group.label}</h3>
-            <p>${group.role}</p>
+  if (heroFocus) {
+    heroFocus.innerHTML = data.branding.heroFocus
+      .map(
+        (item) => `
+          <div class="focus-row">
+            <p>${item.label}</p>
+            <strong>${item.value}</strong>
           </div>
-          <div class="member-list">
-            ${group.members.map((member) => `<span>${member}</span>`).join("")}
+        `
+      )
+      .join("");
+  }
+
+  if (memberGroups) {
+    memberGroups.innerHTML = data.teamGroups
+      .map(
+        (group) => `
+          <article class="member-group" data-reveal="up">
+            <div class="member-heading">
+              <h3>${group.label}</h3>
+              <p>${group.role}</p>
+            </div>
+            <div class="member-list">
+              ${group.members.map((member) => `<span>${member}</span>`).join("")}
+            </div>
+          </article>
+        `
+      )
+      .join("");
+  }
+
+  if (dynamicAuthors) {
+    dynamicAuthors.textContent = data.featuredArticle.authors.join(", ");
+  }
+  if (dynamicAbstract) {
+    dynamicAbstract.textContent = data.featuredArticle.abstract;
+  }
+  if (dynamicImage) {
+    dynamicImage.src = data.featuredArticle.image;
+    dynamicImage.alt = data.featuredArticle.imageAlt;
+  }
+  if (dynamicCaption) {
+    dynamicCaption.textContent = data.featuredArticle.caption;
+  }
+  if (dynamicLinks) {
+    dynamicLinks.innerHTML = data.featuredArticle.links
+      .map(
+        (item) => `
+          <a class="paper-link" href="${item.href}" target="_blank" rel="noreferrer">${item.label}</a>
+        `
+      )
+      .join("");
+  }
+
+  if (studentGrid) {
+    studentGrid.innerHTML = data.studentWorks
+      .map(
+        (item) => `
+          <article class="student-item" data-reveal="up">
+            <p class="paper-tag">${item.student}</p>
+            <h3>${item.title}</h3>
+            <p class="paper-meta">${item.meta}</p>
+            <p class="student-coauthors">${item.coauthors}</p>
+            <a class="paper-link" href="${item.link}" target="_blank" rel="noreferrer">查看讹文</a>
+          </article>
+        `
+      )
+      .join("");
+  }
+
+  if (latestGrid) {
+    latestGrid.innerHTML = data.latestPapers
+      .map(
+        (item) => `
+          <article class="paper-item" data-reveal="up">
+            <h3>${item.title}</h3>
+            <p class="paper-meta">${item.meta}</p>
+            <a class="paper-link" href="${item.link}" target="_blank" rel="noreferrer">查看论文</a>
+          </article>
+        `
+      )
+      .join("");
+  }
+
+  if (contactMeta) {
+    contactMeta.innerHTML = data.contact.items
+      .map(
+        (item) => `
+          <div class="contact-meta-row">
+            <p>${item.label}</p>
+            <strong>${item.value}</strong>
           </div>
-        </article>
-      `
-    )
-    .join("");
+        `
+      )
+      .join("");
+  }
 
-  dynamicAuthors.textContent = data.featuredArticle.authors.join(", ");
-  dynamicAbstract.textContent = data.featuredArticle.abstract;
-  dynamicImage.src = data.featuredArticle.image;
-  dynamicImage.alt = data.featuredArticle.imageAlt;
-  dynamicCaption.textContent = data.featuredArticle.caption;
-  dynamicLinks.innerHTML = data.featuredArticle.links
-    .map(
-      (item) => `
-        <a class="paper-link" href="${item.href}" target="_blank" rel="noreferrer">${item.label}</a>
-      `
-    )
-    .join("");
-
-  studentGrid.innerHTML = data.studentWorks
-    .map(
-      (item) => `
-        <article class="student-item" data-reveal="up">
-          <p class="paper-tag">${item.student}</p>
-          <h3>${item.title}</h3>
-          <p class="paper-meta">${item.meta}</p>
-          <p class="student-coauthors">${item.coauthors}</p>
-          <a class="paper-link" href="${item.link}" target="_blank" rel="noreferrer">查看论文</a>
-        </article>
-      `
-    )
-    .join("");
-
-  latestGrid.innerHTML = data.latestPapers
-    .map(
-      (item) => `
-        <article class="paper-item" data-reveal="up">
-          <h3>${item.title}</h3>
-          <p class="paper-meta">${item.meta}</p>
-          <a class="paper-link" href="${item.link}" target="_blank" rel="noreferrer">查看论文</a>
-        </article>
-      `
-    )
-    .join("");
-
-  contactMeta.innerHTML = data.contact.items
-    .map(
-      (item) => `
-        <div class="contact-meta-row">
-          <p>${item.label}</p>
-          <strong>${item.value}</strong>
-        </div>
-      `
-    )
-    .join("");
+  if (contactUtility && data.contact.internalEntry) {
+    contactUtility.innerHTML = `
+      <a class="internal-link" href="${data.contact.internalEntry.href}" target="_blank" rel="noreferrer">
+        ${data.contact.internalEntry.label}
+      </a>
+    `;
+  }
 
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".site-nav");
@@ -128,6 +171,11 @@
   }
 
   const revealNodes = document.querySelectorAll("[data-reveal]");
+
+  if (!("IntersectionObserver" in window)) {
+    revealNodes.forEach((node) => node.classList.add("is-visible"));
+    return;
+  }
 
   const observer = new IntersectionObserver(
     (entries) => {

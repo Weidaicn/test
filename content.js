@@ -1,30 +1,43 @@
 window.labContent = {
   branding: {
     shortName: "DW",
-    title: "CUG高能核物理与核安全智能研究组",
+    title: "代巍课题组",
     subtitle: "Wei Dai Group · China University of Geosciences (Wuhan)",
-    heroLabel: "Heavy-Ion Transport / Jet Quenching / Heavy-Flavor  Theory Phenomenology",
-    heroTitle: "NUCLEAR",
+    heroLabel: "Wei Dai Group",
+    heroTitle: "Nuclear",
     heroSummary:
-      "欢迎",
+      "围绕重味输运、喷注淬火与相关唯象研究开展工作，并探索人工智能在核安全领域的应用。",
     heroTags: [
       "Langevin transport",
+      "Heavy flavor",
       "Jet quenching",
-      "Heavy-flavor jets",
-      "D meson",
-      "EEC",
-      "Bayesian inference"
+      "Jet substructure",
+      "Nuclear safety AI"
     ],
-    positioning:
-      "做有意思的工作。"
+    heroFocus: [
+      {
+        label: "研究主线",
+        value: "重味物理、喷注淬火、核应急"
+      },
+      {
+        label: "培养方式",
+        value: "博士牵引、硕士推进、本科参与"
+      },
+      {
+        label: "资料管理",
+        value: "公开网站展示成果，NAS 管理组内文档与数据"
+      }
+    ],
+    heroNote:
+      "网站持续更新研究动态、学生成果与最新论文。"
   },
   lead: {
     name: "代巍",
     role: "中国地质大学（武汉）数学与物理学院 / 副教授",
     bio:
-      "China University of Geosciences (Wuhan)，公开邮箱为 weidai@cug.edu.cn。",
+      "主要围绕高能核物理中的输运过程、喷注淬火与重味探针开展理论唯象研究，并关注人工智能在核安全领域的交叉应用。",
     note:
-      "欢迎本科二年级以上的同学加入"
+      "欢迎对高能核物理、核应急与AI数据方法有兴趣的同学加入。"
   },
   featuredArticle: {
     title: "D-meson production via sequential hadronization in high-energy nuclear collisions",
@@ -54,18 +67,18 @@ window.labContent = {
   teamGroups: [
     {
       label: "博士生",
-      role: "年轻",
+      role: "承担子方向推进与论文主导",
       members: ["徐子旋", "刘汉垚"]
     },
     {
       label: "硕士生",
-      role: "年轻",
-      members: ["黄雨杰","郝小伟", "周梓豪"]
+      role: "推进模块计算、结果整理与图表表达",
+      members: ["黄雨杰", "郝小伟", "周梓豪"]
     },
     {
       label: "本科生",
-      role: "年轻",
-      members: ["吴佩瑶","杜辉"]
+      role: "参与文献训练、代码复现与基础任务闭环",
+      members: ["吴佩瑶", "杜辉"]
     }
   ],
   studentWorks: [
@@ -157,9 +170,13 @@ window.labContent = {
     }
   ],
   contact: {
-    title: "CUG高能核物理与核安全智能研究组",
+    title: "中国地质大学（武汉）代巍课题组",
     summary:
-      "向宇宙和认知的边界进发 ！",
+      "欢迎学生申请、合作交流与学术访问联系。",
+    internalEntry: {
+      label: "内部入口",
+      href: "https://nuclear-wd.quickconnect.cn/"
+    },
     items: [
       {
         label: "PI",
@@ -176,7 +193,7 @@ window.labContent = {
     ]
   },
   sourceNote:
-    "研究动态中的作者、摘要和 Figure 4 取自 INSPIRE 3071112 与 arXiv:2510.16299；学生成果按 INSPIRE 中中国地质大学（武汉）作者记录整理，并按用户要求将徐子旋始终作为在组学生处理。统计日期为 2026-04-08。",
+    "研究动态中的作者、摘要和 Figure 4 取自 INSPIRE 3071112 与 arXiv:2510.16299；学生成果按 INSPIRE 中中国地质大学（武汉）作者记录整理，并按要求将徐子旋始终作为在组学生处理。统计日期为 2026-04-09。",
   footer:
-    "AI 辅助更新"
+    "Updated with AI assistance"
 };

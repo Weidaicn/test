@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CUG核物理与核安全智能研究组</title>
+  <title>代巍课题组</title>
   <meta
     name="description"
-    content="课题组官网原型：聚焦朗之万输运框架、辐射与弹性能量损失、medium response，以及人工智能在核安全领域的应用。"
+    content="中国地质大学（武汉）代巍课题组主页：展示研究动态、成员梯队、学生成果与最新论文。"
   >
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,10 +14,10 @@
   <div class="page-shell">
     <header class="site-header">
       <a class="brand" href="#top" aria-label="返回首页">
-        <span class="brand-mark">LT</span>
+        <span class="brand-mark">DW</span>
         <span class="brand-copy">
-          <strong id="brand-title">朗之万输运与核安全智能研究组</strong>
-          <span id="brand-subtitle">Heavy-Ion Transport &amp; Nuclear Safety AI</span>
+          <strong id="brand-title">代巍课题组</strong>
+          <span id="brand-subtitle">Wei Dai Group · China University of Geosciences (Wuhan)</span>
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -41,90 +41,32 @@
           <p class="hero-summary" id="hero-summary"></p>
           <div class="hero-actions">
             <a class="button button-primary" href="#updates">查看研究动态</a>
-            <a class="button button-secondary" href="#people">查看成员梯队</a>
+            <a class="button button-secondary" href="#students">查看学生成果</a>
           </div>
           <ul class="hero-tags" id="hero-tags" aria-label="课题关键词"></ul>
         </div>
 
-        <div class="hero-visual" data-reveal="left">
-          <div class="hero-panel">
-            <div class="signal-head">
-              <span>Transport</span>
-              <span>Response</span>
-              <span>AI Safety</span>
-            </div>
-            <div class="collision-stage" aria-hidden="true">
-              <svg viewBox="0 0 640 640" role="presentation">
-                <defs>
-                  <radialGradient id="coreGlow" cx="50%" cy="50%" r="60%">
-                    <stop offset="0%" stop-color="#fff5d8" stop-opacity="0.9"></stop>
-                    <stop offset="35%" stop-color="#f4b45c" stop-opacity="0.65"></stop>
-                    <stop offset="100%" stop-color="#f4b45c" stop-opacity="0"></stop>
-                  </radialGradient>
-                  <linearGradient id="trackWarm" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#ffd489" stop-opacity="0.1"></stop>
-                    <stop offset="50%" stop-color="#ffc15a" stop-opacity="1"></stop>
-                    <stop offset="100%" stop-color="#ffd489" stop-opacity="0.1"></stop>
-                  </linearGradient>
-                  <linearGradient id="trackCool" x1="0%" y1="100%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#79d1ff" stop-opacity="0.05"></stop>
-                    <stop offset="50%" stop-color="#79d1ff" stop-opacity="0.85"></stop>
-                    <stop offset="100%" stop-color="#79d1ff" stop-opacity="0.05"></stop>
-                  </linearGradient>
-                </defs>
-
-                <circle class="grid-ring" cx="320" cy="320" r="250"></circle>
-                <circle class="grid-ring" cx="320" cy="320" r="190"></circle>
-                <circle class="grid-ring" cx="320" cy="320" r="128"></circle>
-                <circle class="core" cx="320" cy="320" r="96" fill="url(#coreGlow)"></circle>
-
-                <path class="track track-warm" d="M78 338 C154 282, 241 262, 320 320 S487 432, 563 332"></path>
-                <path class="track track-warm delayed" d="M88 285 C166 238, 258 242, 320 320 S482 404, 548 396"></path>
-                <path class="track track-cool" d="M124 458 C218 398, 286 360, 320 320 S428 195, 515 164"></path>
-                <path class="track track-cool delayed" d="M132 202 C226 235, 282 270, 320 320 S428 442, 510 478"></path>
-
-                <circle class="signal-dot" cx="182" cy="300" r="7"></circle>
-                <circle class="signal-dot signal-dot-alt" cx="464" cy="236" r="6"></circle>
-                <circle class="signal-dot" cx="438" cy="404" r="5"></circle>
-
-                <path class="response response-a" d="M216 320 C246 266, 392 266, 424 320"></path>
-                <path class="response response-b" d="M226 320 C256 368, 386 368, 414 320"></path>
-                <path class="response response-c" d="M176 320 C220 220, 420 220, 466 320"></path>
-              </svg>
-            </div>
-            <div class="signal-foot">
-              <div>
-                <small>Core Focus</small>
-                <strong>朗之万输运</strong>
-              </div>
-              <div>
-                <small>Coupled Effects</small>
-                <strong>辐射 / 弹性能损 / 介质响应</strong>
-              </div>
-            </div>
-          </div>
-        </div>
+        <aside class="hero-slab" data-reveal="left" aria-label="课题组概览">
+          <p class="hero-slab-label">Overview</p>
+          <div class="hero-focus" id="hero-focus"></div>
+          <p class="hero-note" id="hero-note"></p>
+        </aside>
       </section>
 
-      <section class="section intro-strip" data-reveal="up">
-        <div class="section-intro">
-          <p class="section-index">00</p>
-          <div>
-            <h2>课题组定位</h2>
-            <p id="positioning-text"></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-accent" id="updates">
-        <div class="section-intro" data-reveal="up">
+      <section class="section" id="updates">
+        <div class="section-head" data-reveal="up">
           <p class="section-index">01</p>
           <div>
             <h2>研究动态</h2>
+            <p>展示近期工作中的代表性结果与正在推进的研究线索。</p>
           </div>
         </div>
-        <div class="dynamic-feature" data-reveal="up">
-          <div class="dynamic-copy">
+        <article class="feature-story" data-reveal="up">
+          <figure class="feature-media">
+            <img id="dynamic-image" alt="">
+            <figcaption id="dynamic-caption"></figcaption>
+          </figure>
+          <div class="feature-copy">
             <p class="subsection-kicker">Featured Article</p>
             <h3 id="dynamic-title"></h3>
             <p class="dynamic-authors" id="dynamic-authors"></p>
@@ -132,36 +74,16 @@
             <p class="dynamic-abstract" id="dynamic-abstract"></p>
             <div class="dynamic-links" id="dynamic-links"></div>
           </div>
-          <figure class="dynamic-figure">
-            <img id="dynamic-image" alt="">
-            <figcaption id="dynamic-caption"></figcaption>
-          </figure>
-        </div>
-
-        <div id="students">
-          <div class="subsection-intro" data-reveal="up">
-            <p class="subsection-kicker">Student Output</p>
-            <h3>学生成果展示</h3>
-          </div>
-          <div class="student-grid" id="student-grid"></div>
-        </div>
-
-        <div id="latest">
-          <div class="subsection-intro" data-reveal="up">
-            <p class="subsection-kicker">Latest Papers</p>
-            <h3>最新论文</h3>
-          </div>
-          <div class="preprint-grid" id="latest-grid"></div>
-        </div>
+        </article>
         <p class="source-note" id="source-note"></p>
       </section>
 
-      <section class="section" id="people">
-        <div class="section-intro" data-reveal="up">
+      <section class="section section-muted" id="people">
+        <div class="section-head" data-reveal="up">
           <p class="section-index">02</p>
           <div>
-            <h2>成员梯队</h2>
-            <p>采用“博士生牵引子方向、硕士推进模块、本科生承担闭环任务”的组织方式，更适合持续产出与人才培养并行推进。</p>
+            <h2>成员</h2>
+            <p>以梯队协作的方式推进课题，兼顾论文产出、方法训练与低年级培养。</p>
           </div>
         </div>
         <div class="people-layout">
@@ -176,19 +98,42 @@
         </div>
       </section>
 
-      <section class="section cta-section" id="contact">
-        <div class="section-intro" data-reveal="up">
+      <section class="section" id="students">
+        <div class="section-head" data-reveal="up">
           <p class="section-index">03</p>
           <div>
-            <h2>招生与联系</h2>
-            <p>公开官网建议承载研究动态、学生成果、最新论文与招生信息；组会纪要、代码、数据和周报仍由 NAS 管理。公开展示与内部协作分开，会更利于长期维护。</p>
+            <h2>学生成果</h2>
+            <p>列出在中国地质大学（武汉）阶段完成的部分论文与预印本成果。</p>
           </div>
         </div>
-        <div class="contact-panel" data-reveal="up">
-          <div class="contact-main">
-            <p class="kicker">Public Site / Internal NAS</p>
+        <div class="collection-list" id="student-grid"></div>
+      </section>
+
+      <section class="section section-muted" id="latest">
+        <div class="section-head" data-reveal="up">
+          <p class="section-index">04</p>
+          <div>
+            <h2>最新论文</h2>
+            <p>按时间顺序整理近期论文与 arXiv 预印本。</p>
+          </div>
+        </div>
+        <div class="collection-list" id="latest-grid"></div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="section-head" data-reveal="up">
+          <p class="section-index">05</p>
+          <div>
+            <h2>联系</h2>
+            <p>欢迎学生申请、合作交流与学术访问联系。</p>
+          </div>
+        </div>
+        <div class="contact-layout" data-reveal="up">
+          <div class="contact-copy">
+            <p class="kicker">Contact</p>
             <h3 id="contact-title"></h3>
             <p id="contact-summary"></p>
+            <div class="contact-utility" id="contact-utility"></div>
           </div>
           <div class="contact-meta" id="contact-meta"></div>
         </div>
