@@ -4,7 +4,7 @@ window.labContent = {
     title: "代巍课题组",
     subtitle: "Wei Dai Group · China University of Geosciences (Wuhan)",
     heroLabel: "Wei Dai Group",
-    heroTitle: "Nuclear",
+    heroTitle: "NUCLEAR",
     heroSummary:
       "围绕重味输运、喷注淬火与相关唯象研究开展工作，并探索人工智能在核安全领域的应用。",
     heroTags: [
@@ -25,11 +25,7 @@ window.labContent = {
       },
       {
         label: "资料管理",
-        value: "公开网站展示成果，NAS 管理组内文档与数据"
-      }
-    ],
-    heroNote:
-      "网站持续更新研究动态、学生成果与最新论文。"
+        value: "公开网站持续更新研究动态、学生成果与最新论文。"
   },
   lead: {
     name: "代巍",
@@ -172,7 +168,7 @@ window.labContent = {
   contact: {
     title: "中国地质大学（武汉）代巍课题组",
     summary:
-      "欢迎学生申请、合作交流与学术访问联系。",
+      "欢迎有意申请、合作交流或学术访问的老师和同学来信联系。",
     internalEntry: {
       label: "内部入口",
       href: "https://nuclear-wd.quickconnect.cn/"
@@ -193,7 +189,7 @@ window.labContent = {
     ]
   },
   sourceNote:
-    "研究动态中的作者、摘要和 Figure 4 取自 INSPIRE 3071112 与 arXiv:2510.16299；学生成果按 INSPIRE 中中国地质大学（武汉）作者记录整理。统计日期为 2026-04-09。",
+    "研究动态中的作者、摘要和 Figure 4 取自 INSPIRE 3071112 与 arXiv:2510.16299；学生成果按 INSPIRE 中中国地质大学（武汉）作者记录整理，并按要求将徐子旋始终作为在组学生处理。统计日期为 2026-04-09。",
   footer:
     "Updated with AI assistance"
 };

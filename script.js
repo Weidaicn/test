@@ -110,7 +110,7 @@
             <h3>${item.title}</h3>
             <p class="paper-meta">${item.meta}</p>
             <p class="student-coauthors">${item.coauthors}</p>
-            <a class="paper-link" href="${item.link}" target="_blank" rel="noreferrer">查看讹文</a>
+            <a class="paper-link" href="${item.link}" target="_blank" rel="noreferrer">查看论文</a>
           </article>
         `
       )
