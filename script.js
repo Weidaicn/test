@@ -1,7 +1,9 @@
 (function () {
-  const revealNodes = document.querySelectorAll("[data-reveal]");
+  document.documentElement.classList.add("enhanced");
+
+  const getRevealNodes = () => document.querySelectorAll("[data-reveal]");
   const showAllSections = () => {
-    revealNodes.forEach((node) => node.classList.add("is-visible"));
+    getRevealNodes().forEach((node) => node.classList.add("is-visible"));
   };
 
   const data = window.labContent;
@@ -175,6 +177,8 @@
       });
     });
   }
+
+  const revealNodes = getRevealNodes();
 
   if (!("IntersectionObserver" in window)) {
     showAllSections();
