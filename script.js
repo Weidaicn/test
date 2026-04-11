@@ -1,7 +1,13 @@
 (function () {
+  const revealNodes = document.querySelectorAll("[data-reveal]");
+  const showAllSections = () => {
+    revealNodes.forEach((node) => node.classList.add("is-visible"));
+  };
+
   const data = window.labContent;
 
   if (!data) {
+    showAllSections();
     return;
   }
 
@@ -170,10 +176,8 @@
     });
   }
 
-  const revealNodes = document.querySelectorAll("[data-reveal]");
-
   if (!("IntersectionObserver" in window)) {
-    revealNodes.forEach((node) => node.classList.add("is-visible"));
+    showAllSections();
     return;
   }
 
