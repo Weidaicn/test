@@ -113,7 +113,7 @@
     studentGrid.innerHTML = data.studentWorks
       .map(
         (item) => `
-          <article class="student-item" data-reveal="up">
+          <article class="student-item">
             <p class="paper-tag">${item.student}</p>
             <h3>${item.title}</h3>
             <p class="paper-meta">${item.meta}</p>
@@ -129,7 +129,7 @@
     latestGrid.innerHTML = data.latestPapers
       .map(
         (item) => `
-          <article class="paper-item" data-reveal="up">
+          <article class="paper-item">
             <h3>${item.title}</h3>
             <p class="paper-meta">${item.meta}</p>
             <a class="paper-link" href="${item.link}" target="_blank" rel="noreferrer">查看论文</a>
