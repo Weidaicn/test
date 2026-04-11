@@ -193,7 +193,7 @@ window.labContent = {
     ]
   },
   sourceNote:
-    "研究动态中的作者、摘要和 Figure 4 取自 INSPIRE 3071112 与 arXiv:2510.16299；学生成果按 INSPIRE 中中国地质大学（武汉）作者记录整理，并按要求将徐子旋始终作为在组学生处理。统计日期为 2026-04-09。",
+    "研究动态中的作者、摘要和 Figure 4 取自 INSPIRE 3071112 与 arXiv:2510.16299；学生成果按 INSPIRE 中中国地质大学（武汉）作者记录整理。统计日期为 2026-04-09。",
   footer:
     "Updated with AI assistance"
 };
